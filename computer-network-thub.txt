@@ -1,0 +1,867 @@
+computer networking
+1.physical
+2.logical
+
+websites---submarinecable.com
+
+the cables are fibre optics cable
+
+workgroup model--no security,no centralised adminstration
+
+client-server--centralises adminstration
+
+go to command terminal 
+
+ipconfig  ---to see the ip address of the system 
+
+
+wifi--wirless federality
+
+//to show the no of network connection
+ncpa.cpl
+
+how to share the directory
+
+1.right cick property sharing select everyone advances sharing enable (share the folder) change the permissin
+
+sharing is done in order the access the files enable the servic3s
+
+go to advances sharing setting 
+first click on private option make all the option is on
+then go the public make sure all the option is on
+all network -leave as it
+
+
+to access the file
+
+i will give my ip address
+
+\\10.23.114.34
+
+client server sharing
+
+rdp--remote desktop protocol
+
+give the access - take the access
+
+
+in networking 
+there is 
+end devices-pc,laptop--is devices which user used
+intermediatory devices--switches,routers  ---through which the connection happen 
+connections - wired ,wireless
+
+group of entheranat combine is called internet
+
+
+cable network
+
+microsoft--NetBios is a protocol through which they communicate with each other
+
+apple--appletalk(protocol)
+
+unix/novel----ipx/spx
+
+when the concept of globalization i.e everyone has to communicate with everyone/everyone should communicate with other
+
+
+in this ways protocol suite(which consists all kind of protocol) came into picture ---->tcp/ip-->it consists of all the protocol i.e everyone can communication with other
+so then after every operating system is having tcp/ip
+
+tracert ----run in cmd  ----tracking how the communication happens and how many intermediatry device having in communciation it tracks the path from your laptop to destination laptop or it traces through which route,which
+router it is taking it to the destination
+
+netstat---show the connection which are already established application with your computer
+
+Tcp/ip protocol model--layer by which data transfer from source and destination
+1.application
+2.internet
+3.transport
+4.networkaccess
+
+Osi(open system interconnection) Layer/Model--
+
+1.application--which kind of application which we are using for data transfer eg.whatsapp calling
+
+2.presentation--suppose we are sharing txt,images will be encoded into machine understanble language and as well it will encrypt the information eg--whatsapp end to end encyption
+
+3.Session layer--establish the conection b/w source and destination
+
+4.Transport--whatever the audio ,videos will turn into segment/part it will be identify the kind of information and it divide into different parts it will be chooped some part of information and also add sequence number to every segment eg-we are sharing 1Gb of data then it will share 1mb of data 
+
+1 h1           4 you
+
+2 how          1 hi 
+
+3 are          2 how
+
+4 you         3 are
+
+
+
+5.network layer--decides through ip's data is sharing from source to destination and it add ip's address to all(source and destination address) the segment in the form packet (header(source ip/destination ip),data))
+
+6.Data link--add MacAddress to source and destination address
+
+1024 msg(frame) is sealed by trailer
+
+
+encapsulation happens in the source
+
+decapsulation happen in the destination
+
+7.Physical layer-- 
+in physical layer start with end device and end device should have network port(wired or wirless) 
+//to view the list of port
+devmgmt.msc
+
+
+port --->cable - is called connection
+
+
+ethernet port is called as rj-45port(registered jack)/network port
+
+fastethernet-10/100Mbps(Megabits)(connected to computer/laptop)
+
+gigabitethernet--(connected to hub)
+
+ethernet cable -2types
+passes data into the electrical signals-0 1
+
+1.UTP--Un-shielded twisted pair
+
+purpose--is used in indoor cablings and having less protection
+
+green-->green
+       w.green  simarily for all 3 wires
+
+total 8 wire and 4 pair
+
+ethernet cable cannot be connected directly we can do it rj-45 pin
+
+
+2.STP--shielded twisted pair
+
+purpose--outdoor cablings and having more protection
+
+
+color coding
+
+we have two standard for color coding --T568A--out of 8 wire are 1,2,3,6 transfered the data and remaninig are for the suppport purpose 
+
+                                      --T568B  
+
+Use of T568A vs T568B
+
+
+T568A----communicating with-----T568A
+
+T568B----communicating with-----T568B
+
+straight cable-the one end of the cable follow the one cable code and other end of cable also follow the same cable code
+
+it is used when both side have different devices
+
+
+Cross cable--the one end of the cable follow the different cable code and other end of cable also follow the different cable code
+
+
+it is used when both side have same devices
+
+T568A----communicating with-----T568B
+
+T568B----communicating with-----T568A
+
+unicasting device---->connection from one computer to another computer
+
+brodcastingdevice--->connection to all computer ,leads to security threats
+
+Hub
+
+hub is broadcasting device (layer1 device)/(half duplex device)
+
+it can either recieves or send the data at the same time or one way communication
+
+Hub operates at physical layer/layer1 device
+
+these problem are solved by switch
+
+Switch ---operates at layer-2(datalink layer) 
+
+It is unicasting device 
+
+It is full-duplex due to which the performance increases
+
+switch works on macaddress rather than signal 
+
+red---icmp----happens second---unicast (is used for ping )
+
+blue---arp(address resolution protocol)---happens first----broadcasting (it is sending packets to everyone) 
+
+Datalink-layer-----Mac Address(Media Access Control)/Physical Address
+
+(Switch is layer2 device)i.e called as data link layer
+
+Switch intially doesnot have the operating system installed in it  and doesnot the any information i.e ping to get the destination mac address and it will flood the packets to everyone and then switch will the create an table containing port number and ip's
+i.e mapping macaddress to ip and second time it will send packets to known ip's
+
+
+Switch --2 typess
+
+unmanaged Switch-----switches which are of low cost and no configuration is required 
+
+managed switch----these switch can have customized configuration
+
+cisco switches have operating system (cisco ios)
+
+console cable -----
+one end is a ethernet port(rj45)(connect switch)-----serialport(rs232)(connect computer) 
+
+3 modes that are avaliable in switch
+
+        --user execution mode ---no configuration can be made (command-- enable)
+          (by using enable command takes me to the privelage mode)
+
+       --privileged execution  command---(it is for verification of the router) 
+       configure terminal(this is command to switch to the third mode from second mode)
+        //to view the list of interface ---command ---show ip interface brief
+
+        //to the general information of the router --command---show running-config
+
+       command ---hostname sw1
+
+       --whenever we make any changes in the setting we have to run this command to make permanent changes                                                                              then should be done in 2 mode command-------> copy running startup-config
+
+       command ----again--configuree terminal
+       command ----interface fastEthernet0/13
+       command -----shutdown
+       command  ----no shutdown
+       command -----to disable the switch all      once ----interface range fastEthernet 0/1-20
+
+--global configuration mode  where actually changes canbe made   
+
+***protect the switch with password***
+
+line console 0(3mode)
+
+password vivek
+
+login
+
+Do these command in  the same location 
+
+then press exit
+
+
+//Protect the second mode 
+
+1.go to the second mode 
+
+2.enable password <your password>
+
+3.exit
+
+Switch have two storages
+
+1.ram           2.nvram
+
+ram--random access memory------>temporary storage ,running configuration happen in ram
+
+so whenver there is power cut then whatever configuration is done is temporarily stored  
+
+to to save it permananenly in nvram
+
+we can do this in this way in second mode
+
+sw1#copy running-config startup-config 
+
+switch>---first mode
+
+sw1#--->second mode
+
+sw1(configure)#---->third mode(global configuration)
+
+to show the configuration/or to view the password
+
+show running-config (2mode)
+
+nvram-non volatile random access memory---->permanent
+
+cisco ios--is--nvram
+
+//to encryption the password 
+
+service password-encryption
+
+
+
+//macaddress command
+getmac
+
+//to view ip address and mac address
+ipconfig /all
+
+//list of command used
+ipconfig
+ping
+netstat
+tracert
+ncpa.cpl
+devmgmt.msc
+getmac
+ipconfig /all
+services.msc
+
+
+ethernet can send the signal upto 100mtrs
+
+Repeater---
+it works as like the hub in order to increase the signal strength
+
+Switch doesnot understand the ip address and it can understand the mac address .so arp maps mac and ip address
+
+
+IP ADDRESSING --works at---NETWORK LAYER--i.e 3LAYER
+
+Router works in this layer
+
+Ip address is called as logical address and it can modified 
+
+
+10.16.59.150 4parts---is called---octates
+
+1 octate-8bits
+
+4 octate-32bits
+
+So IPv4 is 32bit binary address
+
+00000000.00000000.00000000.00000000==0.0.0.0(minimum value)
+
+11111111.11111111.11111111.11111111
+
+1 octat---1 1 1 1 1 1 1 1 
+          7 6 5 4 3 2 1 0
+
+         2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
+
+128+64....1=255
+
+each octat have minimum value as 0 and maximum value as 255
+
+maximum value ---255.255.255.255
+
+
+256*256*256*256=4,29,49,67,296 --->total ip address combination these 4 billion ip address is not enough 
+
+ipv6-340 undecillion chart -
+
+ip address classes
+
+classes are of 5 type
+
+A 	B	C	D	E	F
+
+out of which A,B,C class is used for general communication(unicast)
+D-is used in multicast 
+E-used for R&D purpose, special use,standardard institute(ieee,iso,irtf,eia)
+
+D and E is used for reserved for research and development purpose
+
+A class 0-127
+B class 128-191 
+C class 192-223
+
+D class 224-230
+E class 240-255
+
+
+we can use ip starting from 0-223 range
+
+1 bit=0 or 1
+
+
+class A 0-127
+N.H.H.H
+
+which is loopback ip address --127.0.0.1
+
+first octat is network octat and remaining is host address
+
+11111111.00000000.00000000.0000000
+
+when the octat is filled with all the 1s is called network octat and all 0s in octat is host octat
+
+255.0.0.0---->subnet mask
+
+no ip is start with 0 ie 0.2.1.1
+
+1.0.0.0--1st ip----->exclude this ip ---->because this is a network ip
+
+1.0.0.1--2 ip
+
+1.0.0.2
+
+....
+1.0.0.255
+
+1.0.1.0
+
+1.0.1.1
+
+1.0.1.2
+
+1.0.1.255
+
+1.0.2.0
+1.0.2.1
+....
+1.0.255.255
+
+1.255.255.255-->exclude-->bse it is broadcast ip
+
+host octat show the no of ip's--->256*256*256-->16 million 
+
+class B(128-195)
+
+N.N.H.H
+
+128.0.0.0-->starting-->NIP
+
+128.0.0.1
+
+128.0.0.2
+
+128.0.0.3
+
+..
+128.0.0.255
+
+128.0.1.0
+
+128.0.1.255
+
+128.0.255.255-->BIP
+128.0-->network octat
+
+no of ip we are getting for this network-->256*256-->65000
+
+in class B how many network octat we have--->the first octat start with 128 to 191 so we are getting 64 index position that is applicable for first octat and another octat have 0-255 octat value
+
+so first octat have 64 ranges and second octat have 256 value 
+
+64*256--->16234 networks
+
+class C(192-223)
+
+N.N.N.H
+
+192.0.0.0--->NIP
+192.0.0.1
+
+192.0.0.255--->BIP
+
+total ip--->256(out of which 2 are not useable)
+
+how many network does c class have---->31*256*256=20,97,152
+
+
+
+CLASS A---->LESS NETWORK===127
+          MORE HOST IP'S===16M
+
+CLASS B----> NETWORK===16K
+           HOST IP'S===65K
+
+CLASS C---->MORE NETWORK===2L
+            LESS HOST IP'S===256
+
+CLASS A-255.0.0-->subnet mask
+
+CLASS B-255.255.0.0
+
+CLASS C-255.255.255.0
+
+
+1.0.0.0--1ST
+
+1.0.0.255---256TH
+
+1.0.1.255--512TH
+
+1.0.2.0--513
+
+1.0.2.1--514
+
+1.0.2.2---515
+
+1.0.2.102---615
+
+1.0.2.199---712  ------->THIS IS THE IP FOR 712
+1.0.2.200-713
+1.0.2.201---714
+1.0.2.202---715
+
+
+1.0.2.255--768TH
+
+what is ip of 312th
+
+1.0.0.255---256TH
+
+1.0.1.0---257
+
+1.0.1.1--258
+
+1.0.1.51--308
+
+1.0.1.52--309
+
+1.0.1.53---310
+
+1.0.1.54---311
+
+1.0.1.55---312---->this is ip
+
+
+what is ip of 4096
+
+4096/256-->16
+
+1.0.15.255
+
+
+1.0.0.255-->256
+
+1.0.1.255-->512
+
+1.0.2.255->768
+
+1.0.3.255-->1024
+
+1.0.4.255-->1280
+1.0.5.255--->1536
+
+...
+1.0.15.255-->4096
+
+
+
+in an ip address we are excluding ni and bi these two are not useable ip
+
+536th useable ip-->
+
+
+1.0.0.0-->
+
+1.0.0.1-->1st
+
+1.0.0.255-->25
+
+1.0.1.255-->511
+
+1.0.2.0-->512
+
+1.0.2.1-->513
+
+1.0.2.2--->514
+
+1.0.2.3-->515
+
+1.0.2.13-->525
+
+1.0.2.23-->535
+
+1.0.2.24-->536
+
+
+1.0.2.24
+
+
+subnetting--->dividing the network into subnetwork
+
+
+to avoid the wasting your ip's they divided into subnetwork 
+
+
+192.168.11.0
+   255
+192.168.11.0    192.168.11.64	192.168.11.128
+
+req--in thub there are 60 desktop i need 60 ip address for this ip address i am going to class C network =60
+
+
+192.168.11.0--->this network belong to class
+
+identify the class
+
+identify the subnet mask----255.255.255.0
+
+write the binary value for the subnet mask
+
+11111111.1111111.11111111.00000000
+
+60=111100--->6bits
+
+11111111.1111111.1111111.11000000
+
+
+IPv4 Address
+10.16.59.150
+4 parts seprated by dots each part is called octate
+1 octate contains 8 bits
+4 octate contains 32 bits
+11111111.11111111.11111111.11111111
+255.255.255.255
+01001011.01110101.01010101.11001010
+75.117.85.202
+
+IPv4 has five classes
+A,B,C,D,E   
+we use only
+A,B,C
+D class is used for multicasting
+E class is used for experimental purposes
+
+Ranges of the classes
+A class 0.0.0.0 to 127.255.255.255
+B class 128.0.0.0 to 191.255.255.255
+C class 192.0.0.0 to 223.255.255.255
+D class 224.0.0.0 to 239.255.255.255
+E class 240.0.0.0 to 255.255.255.255
+
+
+N.H.H.H
+N.N.H.H
+N.N.N.H
+
+
+
+10.0.12.3
+
+
+126.56.76.56
+Class : A
+Network id : 126.0.0.0
+Broadcast id : 126.255.255.255
+Last usable ip : 126.255.255.254
+257th usable id : 126.0.1.1
+
+
+subnet mask
+N.H.H.H - 255.0.0.0/8
+N.N.H.H - 255.255.0.0/16
+N.N.N.H - 255.255.255.0/24
+
+1 - network bits
+0 - host bits
+
+
+subnetting - network - subnets
+requirement - 60
+class C
+nearest value - 2^h = 2^6 = 64
+default subnet mask - 255.255.255.0/24
+default subnet mask - 255.255.255.00000000/24
+new subnet mask - 255.255.255.11000000/26
+new subnet mask - 255.255.255.192/26
+no. of hosts and no. of networks
+no. of hosts 2^h - 2^6 = 64
+no.of networks 2^n - 2^2 = 4
+writing the hosts Ranges
+192.168.0.0 - 192.168.0.63
+192.168.0.64 - 192.168.0.127
+192.168.0.128 - 192.168.0.191
+192.168.0.192 - 192.168.0.255
+
+
+
+requirement - 30
+nearest value - 2^h = 2^5
+default subnet mask - 255.255.255.0/24
+default subnet mask - 255.255.255.00000000/24
+new subnet mask - 255.255.255.11100000/27
+new subnet mask - 255.255.255.224/27
+no. of hosts and no. of networks
+no.of hosts 2^h - 2^5 = 32
+no.of networks 2^n - 2^3 = 8
+writing the hosts Ranges
+192.168.0.0 - 192.168.0.31
+192.168.0.32 - 192.168.0.63
+192.168.0.64 - 192.168.0.95
+192.168.0.96 - 192.168.0.127
+192.168.0.128 - 192.168.0.159
+192.168.0.160 - 192.168.0.191
+192.168.0.192 - 192.168.0.223
+192.168.0.224 - 192.168.0.255
+
+requirement - 1000
+B Class
+nearest value - 2^h = 2^10
+default subnet mask - 255.255.0.0/16
+default subnet mask - 255.255.00000000.0000000/16
+new subnet mask - 255.255.11111100.00000000/22
+new subnet mask - 255.255.252.0/22
+no. of hosts and no. of networks
+no.of hosts 2^h - 2^10 = 1024
+no.of networks 2^n - 2^6 = 64
+writing the hosts Ranges
+140.168.0.0 - 140.168.3.255
+                                140.168.0.0 - 140.168.0.255 ---> 256
+                                140.168.1.0 - 140.168.1.255 ---> 256
+                                140.168.2.0 - 140.168.2.255 ---> 256
+                                140.168.3.0 - 140.168.3.255 ---> 256
+140.168.4.0 - 140.168.7.255
+140.168.8.0 - 140.168.11.255
+140.168.12.0 - 140.168.15.255
+
+
+200.56.79.0
+
+req=30
+
+no of host ip--->2^h-->2^5-->32
+
+default subnet mask-255.255.255.0/24
+
+new subnet mask--200.56.79.00000000/24
+
+new subnet mask--200.56.79.11100000/27
+
+new subnet mask---200.56.79.224/27
+
+no of host 2^h--2^5-->32
+
+no of network--->2^3--->8
+
+host range
+
+200.56.79.0---200.56.79.31
+200.56.79.32---200.56.79.63
+200.56.79.64--200.56.79.95
+200.56.79.96--200.56.79.127
+200.56.79.128--200.56.79.159
+200.56.79.160--200.56.79.191
+200.56.79.192--200.56.79.223
+200.56.79.224--200.56.79.255
+
+
+128.11.95.0
+
+req-500
+
+no of host ip--->2^9--->512
+
+default subnet ip---255.255.0.0/16
+
+new default subnet--255.255.00000000.000000000/16
+
+new default subnet--255.255.11111110.00000000/23
+
+new default subnet--255.255.254.0/23
+
+no of host ip--2^h--2^9--512
+
+no of network --2^n-2^7--128
+
+
+128.11.0.0--128.11.0.255--256
+128.11.1.0--128.11.1.255-256
+
+
+512/256--->2-1 ==1
+
+
+128.11.0.0--128.11.1.255----->1 subnet
+
+128.11.2.0--128.11.3.255--->2 subnet
+
+128.11.4.0--128.11.5.255
+
+128.11.6.0--128.11.7.255
+
+128.11.8.0--128.11.9.255
+
+128.11.10.0--128.11.11.255
+
+router--gateway
+
+to configure the router we will use console port and go to teminal 
+
+router acts as a entry point and exit point of network
+
+press no option
+
+command-->enable
+
+command-->configure terminal 
+
+command---interface gigabitEthernet 0/0
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+
+then go to second mode
+
+show ip interface breief
+
+
+then 
+interface gigabitEthernet 0/1
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+
+then go to second mode
+
+show ip interface breief
+
+with this configuration we can communicate two dektop  with different ip 
+
+172.7.0.0/16------we have configure this
+172.8.0.0/16
+
+
+subnetting 
+
+30 req
+
+192.0.0.0--->192.0.0.31
+192.0.0.32---->192.0.0.64
+
+1000
+
+nearest value==2^10-->1024
+default subnet mask--->255.255.0.0/16
+new subnet mask-->255.255.00000000.00000000/16
+new sbnet mask-->255.255.11111100.00000000/22
+new subnet mask-->255.255.252/22
+no of host-->2^10-->1024
+
+no of network-->2^6-->64
+
+128.0.0.0--->128.0.0.63
+128.0.4.64-->128.0.4.127
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
