@@ -1,0 +1,1707 @@
+ctrl+enter--->to come to new line
+
+websites works on basis of three thing
+1.client-a person who  uses the browser
+2.server-provides a services
+3.browser-user working environment
+
+*backenend -is server side of the website it process the data and store it
+
+git--is a open source
+github--is a microsoft owned company which is using git to host repositories on your interface 
+
+seo-search engine optimaization
+
+commmulative layout shift should be less(lighthouse)
+
+web.dev
+
+inline element-inline element do not start on a new line and only take up as much width as neccessary
+ block element are those that start on a new line and take up the entire width of their container by defaults
+
+selectors in css
+1.element selector--div
+2.child selector div > p --div ke andar jo paragraph uskpe property apply ho
+3.class selector
+4.id selector
+5.descendant selector---div p div ke andar paragraph hona wo jaruari nai dirct div k baad wo kisi ke baad bhi ho sakTa
+6.universal selector
+7.nth child selector: nth-child(even)
+
+
+radial gradient-----start from centre
+
+box property
+box-sizing:border box;--->it include padding+border
+without box sizing---it actual size of content
+
+margin collapse-if two elemnt ka margin is overlapping then maximum margin will be applied only once
+
+text-decoration-underline or overline
+
+line -height-space between two pargaraph
+
+the cascading algorithm--will determine which property will be applied
+1.position and order--last one willhave higher preference
+2.specificity- inline > id > class > element > universal
+
+sizing
+px=196 of inch
+responsive width-80vw(viewport width)--->it take 80% width of the originalo display
+ bahout baar aap center karna chate ho kise cheez ko--->margin-auto;-->this property is applicable for block element not in inline element
+
+
+rem and em units--font-size-16(default)1em-16px
+font-size:1em;-->it inherits the size from the orginal font size
+rem-->double the size of the root element(html)
+
+width related topics 
+in mobile --->vmin-width
+in computer --->vmin-height
+
+100 of whatever is the minimum of height and width
+
+it is better to use vh and vw if actaul width and height is not known
+
+converting inline to block element
+display:block;
+
+converting block to inline
+display:inline;
+padding:5em;--->padding top will not be applied if elemrnt is inline and it is same for margin,width
+*****to resolve******
+display:inline-block;
+
+When you want an element to flow like an inline element (i.e., not start on a new line) but also have block-like features (i.e., you can set width, height, margins, and paddings).
+
+
+if dont use the inline-block property but i use **display:none;**--->it will remove the box and it space occupied **visibility-hidden**-->box will clear and it willl the spae occuped 
+
+**flex box**
+display:inline-flex;-->it bring the box in inline but it default is vertical
+
+
+*****this property applies on flex container*************
+**horizontal alignment ---->justify-content:center
+**vertical alignment------->align-item:center
+**row-gap:10px;
+**column-gap:80px;
+**gap:10px 10px;
+
+** if i having more than one row----->align-content:center ---->multiple line will come at center
+
+******flem item*******
+1.) order:2;----->higher the order the later they come in sequence
+2.) flex-grow:1;---->by default 0 ----->flex-grow:2;
+3.) flex-shrink
+4.)  flex-self:start,end------>positioned 
+
+**navbar**
+li have two property--marker and list style
+
+**overflow hidden**
+overflow :scroll;
+overflow:auto;
+white-space:nowrap;---displaying in horizontal line
+
+**position**
+by default box position is static
+position :relative,absolute,fixed,sticky
+to revert the position
+z-index:1;---->for applying z-index we have use positioned element
+we are having four box
+box1...4
+giving box1 to position absolute-->it will check for the poistioned element of parent it go to grandfather(body) -->nearest positioned ancestor it will move as per to html.
+
+*****transform,filter or prespective:0em can make element appear as poistioned**
+
+If it is positioned even absolute ,then it will move according to parent
+
+
+transorm-style:preserve-3d------>give it for child element 
+
+perspective ---applies for parent child will helps us to view the element how is aligned in 3D
+ 
+
+when we are using property flex-wrap thenusing it in px
+
+how to hide the scrollbar 
+
+input::placeholder
+
+
+
+
+position:absolute;-->search for the nearest position element
+
+css variable
+//gobal variable
+:root{
+  --color:blue;
+  --seccolor:green;
+}
+div{
+background-color:var(--color);
+}
+
+opacity:0.5;
+
+
+
+below 455-mobile
+455-750-tablet
+750-1080-laptop
+@media only screen and (max-width:455px){
+}
+
+***********display:flow-root*******************to fit content into container
+
+*******::selection{
+          background-color:blue;
+
+*****grid*******
+display:grid;
+display-grid-template:160px 500px ;column1 column2
+
+grid track- it constistute of combination of two line
+
+grid-row:1/2;start from row1 and end till row2
+grid-column:1/2; 
+
+
+grid-template-area:"nav nav nav"
+                    "side article article"
+                    "footer footer footer";
+.item1{
+grid-area:nav;
+}
+
+width:80vw;
+grid-template-column:1fr 1fr 1fr;
+
+to align the item at center of the cell(wrt of cell)
+justify-items:center;
+
+align-item:center;---->height and width of the container must be there--->align item at the center along y axis wrt of cell  
+
+align-self:start;--->applies to indivual item
+
+
+
+
+grid-template-column:repeat(5,1fr);
+grid-template-column:repeat(5,minmax(100,1fr));
+
+
+if i want to align an item wrt of container(applies only when container size is big but cells/grid size is small)
+justify-content:center;----->horizontal
+
+align-content:center;
+
+place-content:center
+
+
+**transform**
+2d transform-content to be restrutured in ways like translate ,rotate,sclae ,skew etc
+3d transform
+
+transform:rotate(40deg);
+transform:scale(1.6);
+transform:skew(5deg);
+
+transition property -changing from one state to another state
+transition ptoperty makes the transition smooth
+
+
+transition-property:transform;
+transition-duration:3s;
+transition-timing-function:ease-in;
+transition-delay:1s;//after how much time it will start functioning
+
+
+**object fit property and object cover**
+
+img{
+  height:25vh;
+  width:25vw;
+  object-fit:cover---->will adjust the image into that container by cutting some parts
+  object-fit:contain;--->will adjust the image into the container with full view of image
+
+
+  ##to view specific position of the image##
+   object-position:top right;
+    object-position:5 5;
+}
+
+
+
+*****filter*****
+filter:blur(10px);
+
+
+
+
+
+****Javascript*****
+
+
+ <script>
+        alert("hello world");
+ </script> 
+
+
+****to link javascript to html***--------->script:src
+
+nodejs is bascially v8 engine which chrome uses to run your script
+
+
+**********for changing the titlr of webpage document.title="hey i am good"
+***********for changing the style----->document.body.style.backgroundColor="red"---->this add inline css
+
+******variable in javascript***
+1.variable name shouldnot be number
+var is not used in javascript inspite of this let is used
+variable name is case sensitive
+
+
+var vs let in javascript 
+1. var is globally scoped while let and cons is block scope
+
+
+
+datatype in javascript
+1.primitive datatype
+2.object datatype---->userdefined datatype
+
+*******7 primitive datatype*******
+null,number,string,symbol,undefined,boolean
+
+
+let x="vivek kumar";
+let y=9;
+let z=34.8;
+const p=true;
+let q=undefined;
+let r=null;
+console.log(x,y,z,p,q,r)
+console.log(typeof x,typeof y,typeof z,typeof p,typeof q,typeof r)
+
+*********object is combination of key value combination*******
+
+let o={
+    "name":"vivek",
+    "job code":5600
+}
+console.log(o)
+
+console.log(o)
+o.salary=110000  ##adding new data to an object
+console.log(o)
+
+
+REPL---->read evaluate print loop
+
+operator
+=== ---->comparsion and type check
+"3"===3--->false
+"3"==3---->true
+
+*********loops**********
+
+for (let index = 0; index < 100; index++) {
+    console.log(index)
+    
+}
+
+for-in-loops---->gives the object keys
+
+for (const key in object) {
+    // if (Object.hasOwnProperty.call(object, key)) {
+        const element = object[key];
+        console.log(element,key)
+        
+    // }
+}
+
+forof loops--->used for iterable data structure such string,array
+
+for (const iterator of "vivek") {
+    console.log(iterator)
+}
+
+**function***
+we are using function keyword for declaring function
+
+function fun(a) {
+    for(let i=0;i<5;i++){
+        console.log("hey"+a+"you are nice")
+        console.log("hey"+a+"your tshirt is nice")
+    }
+}
+fun("vivek")
+
+
+*******arrow function*********
+
+const func1=(x)=>{
+  console.log("this is a arrow function",x)
+}
+func1(9)
+
+
+*****to generate random no*****->>>>>Math.random()
+
+
+*********string********are immutable *****
+let string_name="vivek"
+console.log(name.length) ##to find the length
+
+if we have many variable then we have to make string template syntax we use back tick(`)
+
+console.log(`his name is ${name} and his friend name is ${friend}`)
+onsole.log(`his friend ${friend} "is" good boy`)
+
+
+*******string operation*******
+
+console.log(friend.toUpperCase())
+
+console.log(friend.slice(3,5))
+
+console.log(friend.replace("ay","pr"))
+
+console.log(friend.concat(" munna ",name," aishwarya "))
+
+// to remove the white space in string 
+let a="  ball"
+console.log(a.trim())
+
+console.log(a.charAt(0))
+
+****Using the test() method:
+
+const str = "Hello World";
+const isUpperCase = /[A-Z]/.test(str);
+
+console.log(isUpperCase); // false
+
+const str = "Hello World";
+const isUpperCase = str === str.toUpperCase();
+
+console.log(isUpperCase); // false
+
+
+**************array***************is mutable**
+array is a collection of multiple datatype such as number ,string ,objects.
+
+
+// array operation in javascript
+console.log(arr.toString())
+
+console.log(arr.join(" and "))
+// 1 and 2 and 8 and 4 and 5
+
+console.log(arr.pop())//it return the last element
+
+arr.push(1)
+arr.push("vivek")
+console.log(arr)
+
+console.log(arr.shift())//removes the first element from array
+
+console.log(arr.unshift("kumar"))//adding the element to starting if the array
+
+console.log(delete arr[4])//it doesnot free up the spaces allocated
+console.log(arr)
+
+let a1=["kumar",9,7]
+console.log(arr.concat(a1))
+
+
+console.log(arr.sort())
+
+console.log(arr.splice(1,3))//return the delete element from the specified position of array and is also used to add element to array
+console.log(arr.splice(1,3,34,23))//24 and 23 is added to array
+console.log(arr)
+
+
+console.log(arr.slice(0,2))
+
+console.log(arr.reverse())
+
+
+###########looping over array###########
+foreach array -call the function once for each array element
+
+arr.forEach((value,index,arr) => {
+    console.log(value,index,arr)
+});
+
+map()--we can make the new array by using the map
+
+let new_arr=[]//create the new array which is square of each element
+for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    new_arr.push(element**2)
+    
+}
+console.log(new_arr)
+
+                    or by using maps
+         
+let new_a=arr.map((e)=>{
+    return e**2
+})
+console.log(new_a)
+
+
+***filter()***
+
+const greaterthan=(e)=>{
+    if(e>3){
+        return true
+    }
+    return false
+}
+console.log(arr.filter(greaterthan))
+
+
+*****reduce method****
+it reduces the array intosingle value
+
+let arr2=[1,32,4,5,6]
+const red=((a,b)=>{
+    return a*b
+})
+console.log(arr2.reduce(red))
+
+
+
+
+****************creation of array*************
+
+
+ let arr=Array.from(Array(number).keys())
+
+
+*********DOM(document object model)**********
+it shows the page in hiearchy order ot tree like structure and it adds inline styling to webpage
+
+with the help of dom we change the properties of particular element in javascript
+
+$0---->utlity provided by browser
+
+
+#########child,parent and sibling node########
+
+document.body.childNodes
+
+document.body.childNodes[0]
+
+let cont=document.body.childNodes[1]
+cont.firstChild
+
+cont.firstElementChild---->will shows the first div of that container node 
+
+cont.lastElementChild.parentNode-->find the parent of the node
+
+document.body.firstElementChild.children--->(children)->will give all html element 
+
+*******element only navigation*******
+document.previousElementSibling-->previous sibling which is an element
+
+.nextElementSibling
+
+
+*****table links*******
+table.rows-->displays the no of rows
+table.caption--->reference to caption
+table.tHead--->........<thead>
+table.tfoot--->...<tfoot>
+table.tBodies-->collectiom of <tbody> element
+tbody.rows--->collection of <tr> inside
+
+
+
+**********Selecting by ids,classname and more**********
+
+let boxes=document.body.getElementsByClassName("box")
+
+HTMLCollection(5) [div.box, div.box, div.box, div.box, div.box]
+
+boxes[2].style.backgroundColor="green"
+
+##targeting element by id's
+
+document.getElementById("red").style.backgroundColor="yellow"
+
+same thing we can do with query selector
+
+ye select phela box(element) jiska class name box hai and it add inline css using javascript
+
+document.querySelector(".box").style.backgroundColor="blue"
+
+
+// document.querySelectorAll(".box").forEach((e)=>{
+//     e.style.backgroundColor="green"
+// })
+
+document.getElementsByTagName("div")-->return the element with div
+
+###matches,closest and contains method######
+elem.matches(css)-->to check if elment matches the given css selector
+
+e=document.getElementsByTagName("div")
+[div.container, div.box, div.box, div.box, div#red.box, div.box, div.box, red: div#red.box]
+e[3].matches("#redbox")
+false
+
+
+elem.contain(css)->rturns true if element is inside elemA
+
+document.querySelector(".container").contains(e[0])
+true
+
+document.querySelector("body").contains(document.querySelector(".container"))
+
+
+######task12 to generate random color#######
+
+a+r(b-a)--->0+Math.random()*255          math.ceil--->to get integer value
+
+
+################################################
+
+innerHTML--->gets the html inside the element as string
+
+document.querySelector(".box").innerHTML
+
+innertext--->gets the html as a text
+
+outerhtml--->gives the full html i.e inner html+element itself
+
+
+tagname--->exists only for element
+
+document.querySelector(".box").tagName
+
+
+textContent--->accesss totext inside the element
+
+hidden property----->is used within the div with attributes hidden specifies whether the element is visible or not
+
+document.querySelector(".box").hidden=true
+
+
+****************Attribute property**************
+
+1.ele.hasAttribute(name)--method to check the existence of the attribute
+
+document.querySelector(".container").hasAttribute("style")
+
+2.ele.getAttribute(name)---to get which attribute is present
+
+
+document.querySelector(".box").getAttribute("style")
+'background: rgb(134, 243, 233);'
+
+3.ele.setAttribute(name,value)---set the value for an attribute
+
+document.querySelector(".box").setAttribute("style","background:red")
+
+
+4.ele.removeAttribute---remove the attribute from ele
+
+document.querySelector(".box").removeAttribute("style")
+
+5.ele.attributes---get all the attributes of the element
+
+document.querySelector(".box").attributes
+
+
+
+**************to manipulate any browser***************
+
+document.designMode="on"
+
+
+DATA ATTRIBUTE--->is custom attribute with "data-"
+
+it can be accessed by ele.dataset
+
+document.querySelector(".box").dataset
+DOMStringMap {created: 'vibes'}
+
+#######insertion method##########
+
+creating an elemet with the help of javascript
+
+ let div=document.createElement("div")
+ div.innerHTML="i have inserted the element inside it"
+ div.setAttribute("class","created")
+ document.querySelector(".container").append(div)
+
+.append---->append at the end
+.prepend--->at the beginning of the element
+.after---->append at the end of element
+.before---->append before the node
+.replaceWith-->replace one node with another node
+
+document.querySelector(".box").replaceWith(div)
+
+
+********insertAdjancyElement HTML/Element/Text*********
+
+.beforebegin---->insert an element/text before starting of the element
+.afterbegin
+.afterend
+
+*****adding HTML 
+ let cont=document.querySelector(".container")
+ cont.insertAdjacentHTML("beforebegin","<div>hi am good boy</div>")
+
+
+***adding element
+ let div=document.createElement("div")
+            div.innerHTML="hi bro"
+            document.querySelector(".container").insertAdjacentElement("beforebegin",divi)
+
+
+******node removal****
+
+removes the node/element 
+.remove()
+
+*****classList
+
+classList-->return the list of the class is having with it
+
+document.querySelector(".container").classList
+
+className---return the name of the class
+
+document.querySelector(".container").className
+
+##adding the class to that ele
+
+ele.classList.add/remove("...")
+
+document.querySelector(".container").classList.add("harry")
+
+
+.toggle("red")---->revert the property such as class of the element
+
+document.querySelector(".container").classList.toggle("red")
+true 
+
+
+
+**********javascript event************
+
+browser event is signal that something has happened
+
+addEventListener(type, listener)
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events--->list of all mouse event
+
+1.contextmenu--->listens when a pointer is being right clicked
+2.dblclick--->listens when double click
+3.click-->listens when single click
+4.mouseleave -listens only if pointer moves out of the element
+
+***keyboard events
+1.keydown-->fired when key is pressed
+2.keyup-->fired when key is released
+
+btn.addEventListener("keydown",(e)=>{//function which takes as a second argument takes event object as a argument
+    console.log(e.key,e.code);
+    // alert("dont hack us by right click")
+})
+
+*form events****
+it is used when form is submiited,input pe focus ho toh kya karna hai
+
+
+********event bubbling*********
+
+if you have listen an event on an element then it listener gets acivated as well as its parnets listener also gets activated
+
+if i dont event bubbling we can stop the propagation
+
+*******setTimeOut and setinterval*********
+
+**********setinterval*****--->if i want a particular propertyshould run repeatedly i willl use the this property and it is function which takes function as a argument
+
+
+setInterval(() => {
+        child.style.background=random_color();
+       }, 3000);
+
+clearInterval--->stops the repeted property
+
+ clearInterval(a) where a is the value of setinterval
+
+
+****setimeout--->repeat the property only once
+
+setTimeout(() => {
+        child.style.background=random_color();
+       }, 3000);
+
+
+
+
+******callbacks and Promises*********
+
+callback--are used whenever you want to call a function once function excecutes
+
+
+object.onload = function(){myScript};
+
+
+<script>
+ const callback =(arg) => {
+          console.log(arg)
+        }
+        
+        const loadscript =(src,callback) => {
+            const script=document.createElement("script");
+            script.src=src;
+            script.onload=callback("vivek");
+            document.head.append(script);
+
+        }
+        loadscript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js",callback)
+
+as the call become more nested---->"callback hell"
+
+the solution of the callback hell is solved by using promises
+
+
+let prom1 = new Promise((resolve, reject) => {//promises is constructor
+  let x = Math.random();
+  if (x < 0.5) {
+    reject("no random no is found");
+  } 
+  else {
+    setTimeout(() => {
+      console.log("yes i am done");
+      resolve("harry");
+    }, 3000);
+  }
+});
+prom1.then((a) => {
+  console.log(a);
+}).catch((err) => {
+  console.log(err)
+}
+)
+
+
+*****promises chaining*********
+ye jo promises hai usko chain kar sakte hai aur jo resolve hai usko pass karwa sakte hai from one to another
+
+
+                                        promises API
+                                         6 method
+1.Promise.all(promises)---wait for the promises to resolve and return array 
+
+
+let p3= Promise.all([prom1,prom2])
+ p3.then((e) => {
+   console.log(e);
+   
+ }
+ ).catch((e1) => {
+   console.log(e1);
+ }
+ )
+
+
+2.Promise.allSettled(promises):it can either resolve or reject if resolve it should return a value without error and return value and status if resolved 
+if rejected status and reason
+
+3.Promise.race()-->waits for the first promise to resolve/settle and result/error become result
+4.resolve()--->ye ek aisa pratith karaega ki ye ek promise the resolve ho gya
+5.reject()--ye ek aisa pratih karegaye ek rejected promise the aur is error ke saath show karega
+
+*********Async/await******************
+
+function getdata() {
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve(455)
+        }, 3500);
+    })
+}
+console.log("loading of modules")
+
+console.log("do something else");
+ 
+
+console.log("load data")
+
+//ek tarrika toh ye hu gya par ye toh callback wla ho gya but async/await ne data ka wait karne ka naya tarrika banaya
+
+let data=getdata()
+
+data.then((v) => {
+    console.log(data);
+
+    console.log("process the data")
+    
+    
+    console.log("task 2");
+}
+)
+
+// async function will run in the background aur i dont matter what that function is doing
+
+
+
+async function getdata() {
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            resolve(455)
+        }, 3500);
+    })
+}
+async function main() {
+    
+console.log("loading of modules")
+
+console.log("do something else");
+ 
+
+console.log("load data")
+
+let data=await getdata()
+
+// but i want to wait for the data to loaded/ wait for async function and await is always under async function
+
+    console.log(data);
+
+    console.log("process the data")
+    
+    
+    console.log("task 2");
+}
+main()
+
+**********min-height---->minimum uski minimimum height utni honi chaiye and uske jaada bhi ho sakti hai
+max-height---->uski height maximum height se jada nai honi chaiye
+
+                   general ways using fetch method
+
+
+async function getdata() {
+    let x = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    // parse--->resolve the data or load of data
+    let data=await x.json()
+    console.log(data)
+    return 455
+}
+
+*******settle---means resolve or reject
+
+resolve---promise has settled successfully
+reject----promise hasnt settled successfully
+
+
+POST REQUEST--helps in submitting the data in form
+PUT REQUEST--helps in updating
+DELETE REQUEST--delete from the server
+
+
+                                       task 12
+
+let last=document.body.getElementbyTagName("div")
+last=last[last.length-1]
+
+             ***************Error Handling******************
+
+ParseInt-->conversion to integer
+
+
+finallly---it is executed in all the cases then we can directly write it.but if we have function and if we return any value then remaining lines will not execute
+
+
+                                   OOP'S
+
+Prototype-->javascript objects have special property that are either null or references another object
+
+
+       we are making protoype inorder to make prototypal inheritance
+
+ rabbit.__proto__=animal---but this is not sufficient we can use class and obj
+
+
+
+                       Advanced Javascript
+
+Destructuring,Spread operator
+
+IIFE--->immediately invoked function expression it runs once if the function is defined
+
+(function funname(){
+//
+})
+
+
+*********destructing **************
+it is used to get values distinct values from the array 
+let x,y=[1,3]
+console.log(x,y)
+
+it will give undefined value for x,y
+
+let [x,y,...rest]=[1,3,75,8,0]
+console.log(x,y,rest)
+
+
+it will give the value for x and y
+
+*****Destructed can be used in object********
+const obj={
+    a:1,
+    b:2,
+    c:3
+}
+const {a,b}=obj;
+console.log(a,b);
+
+
+
+*********Spread Syntax*****
+
+function sum(a,b,c,d) {
+    return a+b+c+d;
+}
+let arr=[1,2,3,5]
+console.log(arr[0]+arr[1]+arr[2]+arr[3])
+console.log(sum(...arr));
+console.log(sum(arr[0],arr[1],arr[2],arr[3]))
+
+
+
+**********LOCAL STORAGE IN BROWSER*********
+
+we can store the data in localstorage as a string
+
+
+ if(localStorage.getItem("name")){
+      a=localStorage.getItem("name")
+      document.write("Welcome "+a)
+ }
+ else{
+     let a=prompt("enter the name")
+     localStorage.setItem("name",a)
+     document.write("Welcome "+a)
+ }
+
+can object can be stored in local storage
+
+******converting object to string***********
+
+JSON.stringify(ob)
+
+
+localStorage.setItem("item",JSON.stringify(ob))//
+localStorage.getItem("item")//gives it as string
+JSON.parse(localStorage.getItem("item"))//gives it as object
+
+
+
+Async Array Mapping: Write an asynchronous function that takes an array of numbers and returns a new array of Promises where each number is multiplied by 2 after a delay of 500 milliseconds.
+
+ async function delayarray(arr) {
+        let arr1=[]
+        return new Promise((resolve, reject) => {
+          setInterval(() => {
+            arr.forEach(x => {
+                arr1.push(x*x)
+                resolve(arr1)
+            });
+          }, 1000);
+        });
+      }
+      (async function main() {
+        async function takes_array(arr) {
+          let arr1 = await delayarray(arr);
+          console.log(arr1);
+        }
+        let arr = [1, 2, 3,4,8];
+
+        takes_array(arr);
+      })();
+
+
+
+******how to playsongs in js
+
+document.getElementById('yourAudioTag').play();//use play() method
+
+var audio = new Audio('audio_file.mp3');
+audio.play();
+
+
+//to convert encoded url to decoded url
+decodeURI(music)
+
+
+//in order to  know the width of the element
+
+getBoundingClientRect().width
+
+When you use element.getBoundingClientRect(), it gives you the position and dimensions of the element on the page. The information includes:
+
+Top: The distance from the top of the viewport to the top of the element.
+Left: The distance from the left side of the viewport to the left side of the element.
+Bottom: The distance from the top of the viewport to the bottom of the element.
+Right: The distance from the left side of the viewport to the right side of the element.
+Width: The width of the element.
+Height: The height of the element.
+
+
+
+ TypeError: document.querySelector(...).forEach is not a function
+
+
+//////////////element.target---->gives that element to which it is being clicked
+
+//////////////element.CurentTarget--->gives that event that has been listened
+
+
+                              Nodejs
+
+in server side we are using node.js and npm for using npm we need to create the package.json by using "npm -init"  and then we any package to the file and their information is copied to npm package.json
+
+//to skip from set of question  --->npm init -y
+
+*********in nodejs we can create modules in two ways --->
+ECMAScript ES6--->it loads the modules asynchronnously and it waits until code get loaded or not ----> import
+Modules are loaded asynchronously (can load multiple modules at the same time).
+
+
+
+CommonJs--->it loads the modules synchronsoly---->require
+
+pacakage name-->slugify  --->it return the string without spaces
+             -->express  --->used for backened application
+
+if i dont wants to laod the sever we install the package "npm nodemon"
+
+npm install --global nodemon --->it will not applies to only this npm project rather than  it install to entire system
+
+nodemon---which automatically get reload once the changes is being done in it
+
+
+The "type": "module" entry in the package.json file is used to indicate that a JavaScript project is using ECMAScript modules (ES modules) instead of the CommonJS module system.
+
+----->when we bringing the modules in commonJS modules ,we can do this in this following ways
+
+const a=require("./mymodule.js");
+console.log(a);
+
+
+module.exports={
+    a:1,
+    b:2
+}
+
+
+let c=56;
+module.exports=c;
+
+we can do export in two ways----
+
+1.Default export
+let ob;
+export default ob={
+    x:1,
+    y:2
+}
+
+import ob from "./mymodule.js"
+
+2.named export 
+
+export const c=3;//export value can be either constant or function or object and it is named export 
+
+import {a} from "./mymodule.js"
+
+(function(exports,require,module,__filename,__dirname){
+  // node.js wrap the module code in this function 
+})
+
+
+Named Exports: Use these when you have multiple functions or variables to export from a module. They allow you to import only the parts you need.
+
+Default Exports: Use these when a module needs to export a single function, object, or class. This is particularly useful when setting up something like middleware or initializing routes in Express.js.
+
+
+
+
+******Working with files**********
+
+fs module --->this modules help in reading the file system
+
+fs.readdir(path)--->read the content inside the directory
+fs.write()-->used to write a file
+
+
+in order to overcome from callback hell node js have fs promises modules 
+
+this is done in ES6 modules
+import fs from "fs/promises"
+let a=await fs.writeFile("ball.txt","tis is a ball")
+let b=await fs.readFile("ball.txt")
+console.log(b.toString());
+
+this is done in common JS
+const fs = require('fs').promises;
+// (async function main() {
+//     let a=await fs.readFile("vivek2.txt")
+//     let f=await fs.writeFile("vivek2.txt","hi therr i am vivek how are you")
+//     let f1=await fs.readFile("vivek2.txt")
+//     let b=await fs.appendFile("vivek2.txt","funny")
+// console.log(a.toString())
+// })()
+
+
+
+
+
+import path from "path"
+let mypath="D:\\all document\\sigmawebdevelopment\\vivek2.txt"
+console.log(path.basename(mypath))//it gives the name of the files
+console.log(path.extname(mypath))//it gives the ext of the files
+
+console.log(path.join("D:/","programs\\vivek.txt"))
+
+
+*****Express Js**********
+
+Web Framwork 
+
+Http package have a limited capability such it cant serve static file,less secure and we have to create the code for get request,post request it make more complex
+
+//app.get or app.post or app.delete or app.put(path,handler) handler takes callback function 
+
+Browser have default getrequest
+
+
+app.get('/blog/:slug/:second', (req, res) => {
+  res.send(`hello ${req.params.slug} and ${req.params.second}`)
+})
+
+where eq.params is an object in :slug are the variable in it
+
+:/slug-->URL parameter
+
+
+In Express.js, a query object refers to the set of key-value pairs that are sent to the server as part of a URL.
+
+the data of the user send to server with the help of the URL
+
+
+*******Suppose you have the file  people we will use builtin middlewareand you wants to give blicit to pu
+
+app.use(express.static('public'))  where public is folder name
+
+	********GET,POST,DELETE,PUT REQUEST************
+
+1.Handling post and other request---->sometime we have to share some sensitive info such email and password and sometimes html.these things server pe jayege tb na login hoga
+
+
+POST REQUEST    let a=await fetch("/",{method:"POST"})
+
+for testing whether post request is working smooth or not we making one html page and write the script in the in this manner or we can use postman for the same
+
+    async function testpost(){
+            let a=await fetch("/",{method:"POST"})
+            let b=await a.text()
+            console.log(b);
+            
+        }
+
+PUT REQUEST--a PUT request in Express.js is a way for a client (like a web browser or a mobile app) to send updated information to the server. It's like telling the server, "Here is the new version of something, please replace the old version with this."
+
+		SERVE THE HTML
+
+1..Create the folder named as template 
+2..make the index.html files in it
+
+
+NOTE::In order display proper html file we have to use sendFile function
+
+	res.sendFile('Hello World! index')
+
+	app.get("/index",(req,res) => {
+    console.log("this is index page dude");
+    res.sendFile('template/index.html',{root:__dirname})
+    res.json({ a: 1, b: 2, c: 3 });
+	}
+	)
+
+
+			INSTALLING POSTMAN-->SOFTWARE
+
+
+
+
+
+
+An API (Application Programming Interface) is like a waiter at a restaurant. Imagine you're at a restaurant and want to order food. You don't go into the kitchen and cook the meal yourself; instead, you interact with the waiter.
+
+Similarly:
+
+User (You): You are like a user of a service or application.
+Waiter (API): The waiter is like an API. It takes your order (request) and communicates it to the kitchen (server). Once the food (data) is ready, the waiter brings it back to you.
+So, an API is essentially a messenger that allows different software systems to communicate and work together. It defines a set of rules and conventions for how software components should interact, just like a menu in a restaurant defines how you can order your food.
+
+			EXPRESS ROUTING
+
+Express routing allows you to organize your code.it's like creating a map that tells your server how to handle different types of requests for different URLs.
+
+
+
+In Express.js, express.Router() is a method that creates a modular, mini-application or router within your main Express application. This mini-application can handle specific routes and have its middleware and routes defined separately from the main application.
+
+Here's a simple breakdown:
+
+Create a Router:
+
+javascript
+Copy code
+const express = require('express');
+const router = express.Router();
+You are creating a new router using the express.Router() method. The router variable now holds this new router instance.
+
+Define Routes and Middleware for the Router:
+
+javascript
+Copy code
+router.get('/', (req, res) => {
+  res.send('This is the router home page');
+});
+
+router.get('/about', (req, res) => {
+  res.send('This is the about page in the router');
+});
+You can define routes and middleware specific to this router using the router object. In this example, it defines a route for the root ('/') and another for '/about'.
+
+Use the Router in Your Main Application:
+
+javascript
+Copy code
+const app = express();
+
+// Use the router for paths starting with '/router'
+app.use('/router', router);
+
+
+
+
+
+*****************************************************************************
+
+
+  const blog = require('./routes/blog') 
+  app.use('/blog', blog)---->ye pe 'blog' object handle woh routes ko jiska path /blog se start ho rha hai
+
+
+
+				Middleware
+it modifies the request and starts performing the tasks
+
+we are making the function and then it wrap it into app.use 
+
+next-->agla middleware
+
+next()--->giving controller to next middleware
+
+
+Middleware is like a function or set of functions that can do something with the request or response during this cycle. It can modify the request, the response, or perform some actions before passing control to the next middleware.
+
+ Middleware allows you to perform tasks like logging, authentication, modifying requests, or handling errors before the final response is sent back to the client.
+
+
+Middle is a function which before the request and it has req object,res obj and even it can send the respnse
+
+Date.now()--->it gives the timestamp when request is being made by user
+
+
+
+const myLogger1 = function (req, res, next) {
+  console.log('m1')
+  req.vivek="hi there i am vivek"//request object pe vivek add kar deya
+  console.log(req.headers)
+  fs.appendFileSync("vivek1.txt",`${Date.now()} is a ${req.method}`)
+  // console.log(fs.readFile("vivek.txt"))
+  console.log(`${Date.now()} is a ${req.method}`);
+  next()
+}
+app.use(myLogger1)
+
+
+				ejs template engine
+
+ejs--embedded javascript templates
+
+EJS stands for Embedded JavaScript, and it's a simple templating language that allows you to embed dynamic JavaScript code within HTML files. In simpler terms, it helps you generate HTML content dynamically by including bits of JavaScript code directly in your HTML files.
+
+Instead of writing static HTML content, EJS lets you insert variables, loops, conditions, and other dynamic elements into your HTML, making it easier to generate dynamic web pages.
+
+
+ "render" refers to the process of generating and displaying the final output, often in the form of a webpage, based on the provided data and templates.
+
+
+// Set EJS as the view engine
+app.set('view engine', 'ejs');--->it works is to bring the variable from express.js to template files and view of the view is to render the value of the variables in templates files
+
+npm install ejs karke hume ek views folder banana hai
+
+
+			https://github.com/mde/ejs.wiki.git
+
+
+ <%- include('user/show', {user: user}); %>
+
+
+
+					Mongodb
+
+MongoDB makes it easy for developers to store structured or unstructured data. It uses a JSON-like format to store documents.
+
+data get stored permanently if data is inserted into it 
+
+			commands
+ 1.show databases---->display allthe databsae
+ 2.use sigma-->switch to sigma database
+ 3.db.courses.find()--->will the data as the document
+ 4.db.courses.find()---->will add the data
+
+
+			CRUD ooperation
+C-create  R-read U-update D-delete
+
+let a=db.courses.find({price:23000})
+console.log(a.count());//giive the no of document in collection
+
+
+it will give the first price ------->db.courses.findOne({price:23000})
+
+when there is multiple result we add toArray() function
+console.log(a.toArray())
+
+
+for updating the document we have to use atomic operator set ka
+
+updateOne(): Updates the first document that matches the specified filter.
+
+
+				CRUD operation
+
+1.$eq--->It's used to find documents where a particular field is equal to a specified value.
+
+db.students.find({ "age": { $eq: 18 } })
+
+
+2.$gt---->It's used to find documents where a particular field's value is greater than a specified value.
+
+db.products.find({ "price": { $gt: 50 } })
+
+
+3.$gte----->It's used to find documents where a particular field's value is greater than or equal to a specified value.
+
+db.products.find({ "price": { $gte: 50 } })
+
+4.$in---->It's used to find documents where a field's value matches any value in the provided array.
+
+You want to find all the employees who belong to either the "Sales" or "Marketing" departments.
+
+db.employee.find({"department":{$in:["Sales","Marketing"]}})
+
+5.$lt---->It's used to find documents where a field's value is less than the provided value.
+
+db.database.find({"age":{$lt:20}})
+
+
+5.$lte----->It's used to find documents where a field's value is less than or equal to the provided value.
+
+db.database.find({"age":{$lte:20}})
+
+6.$ne---->It's used to find documents where a field's value does not match the provided value.
+
+db.database.find({"age":{$ne:18}})
+
+7.$nin---->particular field's value does not match any value in a specified array.
+
+db.employee.find({"department":{$nin:["Sales","Marketing"]}})
+
+
+			logical query operator
+
+1.$and---->You want to find all the products that belong to the "Electronics" category and have a price less than $500.
+
+db.products.find({ $and: [ { "category": "Electronics" }, { "price": { $lt: 500 } } ] })
+
+2.$or---->it will gives the document having field if any one if the condition is true
+
+db.students.find({ $or: [ { "age": 18 }, { "gpa": { $gt: 3.5 } } ] })
+
+3.$nor----->In MongoDB, the $nor operator is used within queries to specify multiple conditions, where none of the conditions must be met for a document to be included in the results. It's the negation of the $or operator.
+
+
+db.students.find({ $nor: [ { "age": 18 }, { "gpa": { $gt: 3.5 } } ] })
+
+
+			Element Query operator
+
+1.$exists--->$exists operator is used within queries to specify whether a field exists or not in a document. It's used to find documents based on the presence or absence of a particular field.
+
+db.students.find({ "grade": { $exists: true } })
+
+			Evaluation query operator
+1.
+$mod---->$mod operator is used within queries to select documents where the value of a field modulo another value equals a specified remainder
+
+db.products.find({ "quantity": { $mod: [2,1] } })
+ where 2 is no which has to be dived 
+ and 1 leaves the remainder
+
+2.$regex---->is used to return the document with specified pattern matching
+
+In simple terms, $regex in MongoDB allows you to perform pattern matching on text fields, making it useful for searching and filtering documents based on specific patterns or substrings within those fields.
+
+db.users.find({ "email": { $regex: /gmail.com/ } })--->it will return the name with email having gmail.com 
+
+
+3.$text----->. It allows you to search for documents that contain a specified string of text.
+
+db.articles.find({ $text: { $search: "MongoDB" } })
+
+
+
+					MAngoose
+it is used for validation
+
+
+In Mongoose, a schema is a blueprint that defines the structure of the documents within a collection in a MongoDB database. It specifies the fields, their types, default values, validation rules, and other properties for the documents.
+
+
+MOdels It allows you to perform CRUD operations (Create, Read, Update, Delete) on the documents in the collection
+
+
+				BODY PARSER
+Body-parser is the Node.js body-parsing middleware. It is responsible for parsing the incoming request bodies in a middleware before you handle it. 
+
+
+
+				WEB HOISTING
+
+file zilla is a software jiske madaad se drag aur drop karke file upload kar sakte ho 
+
+ssh root@ipaddress
+
+types of hosting
+1.shared hosting--some resoureces is shared among the user and is comparitely slow
+2.dedicated hosting---virtual computer or terminal is given to the user
+3.managed hosting---wordpress and it is costly and gives templates for username and password
+
+dotenv---
+
+dotenv allows developers to store these variables in a special file (usually named .env) and then load them into their Node.js application. This makes it easier to keep sensitive information separate from your codebase and to configure your app for different environments (like development, testing, and production) without changing your code.
+
+So, instead of hardcoding sensitive information directly into your code, you store them in a .env file, and dotenv loads them into your application when it starts up, making them accessible as regular variables in your code.
+
+how to host html files
+
+apt install apache2 or nginx
+y
+ aapko folder/var/www milega cd/var/www
+cd html/
+
+VPS----virtual private server
+we will login through ssh terminal to access the computer 
+
+
+				react---best developer experience
+
+in react there are two component
+11.class basec component 2.function based component
+
+react uses function based component
+
+---we can use state which means that once we update the variable it changes accross the page
+
+the jsx code is complied by babel and babel compile it into proper javascript code
+
+for--->in react htmlFor
+in react app we can return only tag/element
+
+single page application vs non singlepage application
+single page--->request will be send to the server only once .server gives response as html,css and js as a bundle. ek baar page load kiya jaise ki/videos reload hua js load ho jayegi  
+
+
+multi page aplication--->in every page there will be corresponding html,css and js .once the page is loaded /codewithharry.com or /videoes and then after javascript will take over and with the help of api similar page will be populated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In React, "props" is short for "properties," and it's a way to pass data from one component to another. Imagine you have a parent component and a child component. You can use props to send information from the parent component to the child component.
+
+In simpler terms, think of props as messages or instructions you give to a component. These messages could be anything from text, numbers, functions, or even more complex data structures. The child component receives these messages as props and can use them to customize its behavior, content, or appearance.
+
+For example, if you have a parent component representing a shopping list and a child component representing individual items, you could pass the name and price of each item as props from the parent to the child. The child component would then use these props to display the name and price of each item on the list.
+
+
+named export and default export
+
+default export
+
+it is module.mjs
+const a="vivek";
+const b="ram";
+const c="shyam"
+const d="anu";
+export default d;
+
+
+it is in module.mjs
+import ui from './module1.mjs'
+console.log(ui);
+
+react function component ----->rfc
+
+
+sometimes we have to pass the value to the component has changes from time to times
+
+apne ek component banaya then we pass the properties inside the component
+
+<Navbar title="TextUtils " aboutus="about me"/> ---->components with props
+
+
+suppose i forget to provide the default props then this default props will run
+Navbar.defaultProps={
+    title:'set the title',
+    aboutus:'set the about'
+}
+
+every component have its state where state is the situation
+
+
+
+				react router
+we can make the single page application instead of bringing the entire page we are bringing some component of the data
+
+  const router =createBrowserRouter([
+    <Route path="/" element={<Navbar title='TextUtils' aboutus='about me' Mode={mode} togglestate={togglestate} color={color}/>/}
+  ])
+
+
+
+CLS-COMMULATIVE LAYOUT SHIFT
+
+
+how to enable https on our sites
+
+			class based component
+
+0ceffdc21657469ebdfc603fd1c48bd4
+
+component lifecycle
+
+the series of event that happen from mounting of react component ton its unmounting
+
+method of component lifecycle
+
+1.render() method --this method is required to render HTML component in react.in class based component we have to use render method to render DOM..It runs during the mounting and updation of your component ********we cannot modify the state of component inside the render method
+
+2.CompnentDidMount()-->method runs after the component output has been rendered to the DOM
+
+3.componentdidupdate()--is invoked as soon as the updating happens;it occurs when the props or state changes
+
+4.componentwillunmount()--is invoked before the component is unmounted
+
+
+q---->Keywords or a phrase to search for    &q=cricket
+
+
+state in react----are used when wants to make change again and again dynamically without reloading the page 
+
+props cannot be changed
+
+
+agar apko props pass karke state set karni hai toh state change kar sakte ho props ko change nai kar sakte ho
+
+
+
+componentDidMount(){//it is lifecycle method
+   
+   it runs immediately after render method runs
+
+   
+
+
+  }
+
+
+  can we insert proptypes in class based component?? yes
+
+
+React Router
+
+const router=createBrowserRouter([
+  {
+    path:"/",
+    element:<><Navbar/><News pageSize={6} key={"general"} country={"in"} category={"general"}/></>
+  }
+}
+when we dont place unique key props in News component, react will not able to mount the compnent because component is already mounted but we change forcefully mount the component by using unique key props
+
+
+format of date
+
+a="2024-05-18T01:30:06Z"
+
+b=new Date(a)
+Sat May 18 2024 07:00:06 GMT+0530 (India Standard Time)
+
+b.toGMTString()
+'Sat, 18 May 2024 01:30:06 GMT'
+
+
+whenever we wants thedetails of the user logged we cannot write the code in ./getdetails because we have to copy the code everywhere we require the authenication it become very untidy code
+
+
+  react hooks (function lifecycle method)
+
+ 
+whatever is the feature which we are using in class based component,the same                                                          feature can be used in function based component by using hooks
+
+
+React lifecycle method which is usually seen in class based component we can also use it in function based component by using hooks
+
+commonly used hook
+
+1.useState
+2.useEffect
+3.usecontext
+4.useref
+
+
+
